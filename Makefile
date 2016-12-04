@@ -29,7 +29,7 @@ build:
 
 run:
 	docker rm $(CONTAINER_NAME) || true
-	docker run -d --name $(CONTAINER_NAME) $(PORTS) $(VOLUMES) $(NAMESPACE)/$(IMAGENAME)
+	docker run -d --name $(CONTAINER_NAME) $(PORTS) $(VOLUMES) $(ENVS) $(NAMESPACE)/$(IMAGENAME)
 
 
 stop:
